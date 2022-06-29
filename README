@@ -1,0 +1,9 @@
+How to deploy
+
+docker build -t sws/tinyproxy .
+
+then check setting in tinyproxy.conf and copy it to /etc/tinyproxy/tinyproxy.conf
+
+and 
+
+docker run -d --name='tinyproxy' -v /etc/tinyproxy/tinyproxy.conf:/etc/tinyproxy/tinyproxy.conf -p 37220:37220 sws/tinyproxy:latest
